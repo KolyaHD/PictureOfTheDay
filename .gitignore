@@ -12,5 +12,4 @@
 /captures
 .externalNativeBuild
 .cxx
-.jpg
-.png
+/app/src/main/res/drawable-xxhdpi/*
