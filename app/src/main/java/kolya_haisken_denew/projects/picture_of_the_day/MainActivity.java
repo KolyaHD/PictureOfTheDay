@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         String TAG = "MainActivity";
 
-        Integer[] imageList= {R.drawable.image1, R.drawable.image2, R.drawable.image3, R.drawable.image4, R.drawable.image5, R.drawable.image6, R.drawable.image7, R.drawable.image8, R.drawable.image9, R.drawable.image10, R.drawable.image11, R.drawable.image12, R.drawable.image13, R.drawable.image14, R.drawable.image15, R.drawable.image16, R.drawable.image17, R.drawable.image18, R.drawable.image19, R.drawable.image20, R.drawable.image21, R.drawable.image22, R.drawable.image23, R.drawable.image24, R.drawable.image25, R.drawable.image26, R.drawable.image27, R.drawable.image28, R.drawable.image29, R.drawable.image30, R.drawable.image31, R.drawable.image32, R.drawable.image33, R.drawable.image34, R.drawable.image35, R.drawable.image36, R.drawable.image37, R.drawable.image38, R.drawable.image39, R.drawable.image40, R.drawable.image41, R.drawable.image42, R.drawable.image43, R.drawable.image44, R.drawable.image45, R.drawable.image46, R.drawable.image47, R.drawable.image48, R.drawable.image49, R.drawable.image50, R.drawable.image51, R.drawable.image52, R.drawable.image53, R.drawable.image54, R.drawable.image55, R.drawable.image56, R.drawable.image57, R.drawable.image58, R.drawable.image59, R.drawable.image60, R.drawable.image61};
+        Integer[] imageList= {R.drawable.image1, R.drawable.image2, R.drawable.image3, R.drawable.image4, R.drawable.image5, R.drawable.image6, R.drawable.image7, R.drawable.image8, R.drawable.image9, R.drawable.image10, R.drawable.image11, R.drawable.image12, R.drawable.image13, R.drawable.image14, R.drawable.image15, R.drawable.image16, R.drawable.image17, R.drawable.image18, R.drawable.image19, R.drawable.image20, R.drawable.image21, R.drawable.image22, R.drawable.image23, R.drawable.image24, R.drawable.image25, R.drawable.image26, R.drawable.image27, R.drawable.image28, R.drawable.image29, R.drawable.image30, R.drawable.image31, R.drawable.image32, R.drawable.image33, R.drawable.image34, R.drawable.image35, R.drawable.image36, R.drawable.image37, R.drawable.image38, R.drawable.image39, R.drawable.image40, R.drawable.image41, R.drawable.image42, R.drawable.image43, R.drawable.image44, R.drawable.image45, R.drawable.image46, R.drawable.image47, R.drawable.image48, R.drawable.image49, R.drawable.image50, R.drawable.image51, R.drawable.image52, R.drawable.image53, R.drawable.image54, R.drawable.image55, R.drawable.image56, R.drawable.image57, R.drawable.image58, R.drawable.image59, R.drawable.image60};
 
         Date currentDate = Calendar.getInstance().getTime();
         SimpleDateFormat df = new SimpleDateFormat("dd/MM/yy", Locale.getDefault());
@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         ImageView imageView = findViewById(R.id.imageView);
         TextView txtMessage = findViewById(R.id.txtMessage);
+        txtMessage.setVisibility(View.VISIBLE);
         String dayAndMonth = formattedDate.substring(0,5);
         if (dayAndMonth.equals("15/07")) {
             imageView.setImageResource(R.drawable.first_message);
@@ -51,10 +52,12 @@ public class MainActivity extends AppCompatActivity {
         } else if (dayAndMonth.equals("14/02")) {
             imageView.setImageResource(R.drawable.valentines_day);
             txtMessage.setText("I LOVE YOU");
-//        } else if (dayAndMonth.equals("04/09")) {
-//            imageView.setImageResource(R.drawable.her_birthday);
-//        } else if (dayAndMonth.equals("06/09")) {
-//            imageView.setImageResource(R.drawable.anniversary);
+        } else if (dayAndMonth.equals("03/09")) {
+            imageView.setImageResource(R.drawable.her_birthday);
+            txtMessage.setText("HAPPY BIRTHDAY, MY LOVE!");
+        } else if (dayAndMonth.equals("05/09")) {
+            imageView.setImageResource(R.drawable.anniversary);
+            txtMessage.setText("Today is our anniversary!");
         }
         else {
             txtMessage.setVisibility(View.GONE);
